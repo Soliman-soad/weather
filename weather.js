@@ -5,10 +5,16 @@ const loadData = (city) =>{
     .then(data => displayWeather(data))
 }
 const displayWeather = weather => {
-    console.log(weather);
+    
     document.getElementById('city-name').innerText = weather.name;
     document.getElementById('temp').innerText = weather.main.temp;
     document.getElementById('condition').innerText = weather.weather[0].main;
+}
+
+const cityWeather= () => {
+    const cityInput =  document.getElementById('city');
+    loadData(cityInput.value)
+    cityInput.value=""
 }
 
 loadData('Dhaka');
