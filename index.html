@@ -27,8 +27,12 @@
             type="text"
             placeholder="Search…"
             class="input input-bordered w-2/6"
+            id="city"
           />
-          <button class="btn btn-square bg-red-600 border-0">
+          <button
+            onclick="cityWeather()"
+            class="btn btn-square bg-red-600 border-0"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-6 w-6"
@@ -62,11 +66,14 @@
           </svg>
         </div>
         <div class="font-bold">
-          <h2 class="text-5xl">Dhaka</h2>
-          <h4 class="text-3xl">temperature: <span> 27</span></h4>
-          <h4 class="text-3xl">Condition: <span> 27</span></h4>
+          <h2 class="text-5xl" id="city-name">Dhaka</h2>
+          <h4 class="text-3xl">temperature: <span id="temp"> 27</span></h4>
+          <h4 class="text-3xl">Condition: <span id="condition"> 27</span></h4>
         </div>
       </div>
     </main>
+
+    <!-- script src -->
+    <script src="./weather.js"></script>
   </body>
 </html>
